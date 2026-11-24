@@ -1,0 +1,41 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Asama Inc.
+
+# vmagent-style: per-BMC under hosts, plus hosts.default when ?target= is not listed.
+# The addresses are from the documentation range 192.0.2.0/24; use your BMCs' addresses.
+#
+#   go run . --config redfish.yml
+#
+hosts:
+  192.0.2.10:
+    username: readonly
+    password: "replace-me"
+  192.0.2.11:
+    username: readonly
+    password: "replace-me"
+  default:
+    username: readonly
+    password: "replace-me"
+
+loglevel: info
+
+# Credential provider. Omitted means provider config: usernames and passwords above are used.
+# provider onepassword reads OP_SERVICE_ACCOUNT_TOKEN from the environment (never from this file)
+# and loads username/password from the item named by item_template.
+# Placeholders: {{ip}}, {{hostname}}, and {{serialnumber}}.
+# A missing item falls back to the default item, then these YAML hosts.
+#
+# credentials:
+#   provider: config
+#   timeout: 5s
+#   onepassword:
+#     vault: bmc
+#     item_template: "{{ip}}"
+#     # default_item: "iDRAC admin credentials"
+#     # item_template: "{{hostname}}-{{serialnumber}}"
+#     fields:
+#       # The key is our credential. onepassword is the field label on the 1Password item.
+#       username:
+#         onepassword: username
+#       password:
+#         onepassword: password

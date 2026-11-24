@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: Apache-2.0
+# Copyright 2026 Asama Inc.
+
+# Keep the build context small and keep credentials and local state out of the image.
+.git
+.github
+build
+redfish.yml
+redfish-log-checkpoints.json
+redfish-inventory-exporter
+*_test.go

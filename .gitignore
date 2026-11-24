@@ -1,0 +1,4 @@
+build
+redfish-inventory-exporter
+/redfish.yml
+/redfish-log-checkpoints.json
