@@ -6,7 +6,7 @@ toolchain go1.26.11
 
 require (
 	github.com/1password/onepassword-sdk-go v0.4.1
-	github.com/VictoriaMetrics/metrics v1.43.2
+	github.com/VictoriaMetrics/metrics v1.45.0
 	github.com/apex/log v1.9.0
 	github.com/asama-ai/redfish_exporter v0.1.8
 	github.com/stmcginnis/gofish v0.20.0
